@@ -16,7 +16,6 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 public class Curso {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,4 +25,13 @@ public class Curso {
     @OneToMany(mappedBy = "curso")
     @ToString.Exclude
     private List<Usuario> usuarios = new ArrayList<>();
+
+    @Override
+    public String toString() {
+        return "\nCurso{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", sigla='" + sigla + '\'' +
+                '}';
+    }
 }
