@@ -1,5 +1,7 @@
-package br.edu.ifsul.cstsi.lpoo_objetivo6_orm_crud.model;
+package br.edu.ifsul.cstsi.lpoo_objetivo6_orm_crud.usuario;
 
+import br.edu.ifsul.cstsi.lpoo_objetivo6_orm_crud.curso.Curso;
+import br.edu.ifsul.cstsi.lpoo_objetivo6_orm_crud.empresa.Empresa;
 import jakarta.persistence.*;
 import lombok.*;
 
