@@ -8,6 +8,7 @@ public class LpooObjetivo6OrmCrudApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(LpooObjetivo6OrmCrudApplication.class, args);
+        HomeController.main(null);
     }
 
 }
