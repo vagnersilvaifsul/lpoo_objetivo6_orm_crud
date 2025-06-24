@@ -27,7 +27,7 @@ public class Empresa {
     private Double latitude;
     private Double longitude;
     private String urlLogo;
-    @OneToMany(mappedBy = "empresa")
+    @OneToMany(mappedBy = "empresa", fetch =  FetchType.LAZY)
     @ToString.Exclude
     private List<Usuario> usuarios = new ArrayList<>();
 }

@@ -22,7 +22,7 @@ public class Curso {
     private Long id;
     private String nome;
     private String sigla;
-    @OneToMany(mappedBy = "curso")
+    @OneToMany(mappedBy = "curso", fetch = FetchType.LAZY)
     @ToString.Exclude
     private List<Usuario> usuarios = new ArrayList<>();
 
