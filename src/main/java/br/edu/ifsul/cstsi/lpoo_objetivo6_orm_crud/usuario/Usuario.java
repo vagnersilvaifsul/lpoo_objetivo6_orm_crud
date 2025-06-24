@@ -28,19 +28,13 @@ public class Usuario {
     private String urlFoto;
     @Enumerated(EnumType.STRING)
     private Perfil perfil;
-    @ManyToOne
+    @ManyToOne (fetch = FetchType.EAGER)
     @JoinColumn(name = "curso_id")
     private Curso curso;
-    @ManyToOne
+    @ManyToOne (fetch = FetchType.EAGER)
     @JoinColumn(name = "empresa_id")
     private Empresa empresa;
-    @ManyToMany
-    @JoinTable(
-        name = "usuario_contatos",
-        joinColumns = @JoinColumn(name = "usuario_id"),
-        inverseJoinColumns = @JoinColumn(name = "contato_id")
-    )
-    @ToString.Exclude
+    @OneToMany (fetch = FetchType.EAGER)
     private List<Usuario> contatos = new ArrayList<>();
 
 }
